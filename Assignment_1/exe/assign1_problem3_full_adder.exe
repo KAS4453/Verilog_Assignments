@@ -1,0 +1,84 @@
+#! /c/iverilog/bin/vvp
+:ivl_version "0.9.7 " "(v0_9_7)";
+:vpi_time_precision + 0;
+:vpi_module "system";
+:vpi_module "v2005_math";
+:vpi_module "va_math";
+S_01189030 .scope module, "full_adder_tb" "full_adder_tb" 2 1;
+ .timescale 0 0;
+v01055170_0 .var "A", 0 0;
+v01055380_0 .var "B", 0 0;
+v01054F60_0 .var "CIN", 0 0;
+v01055220_0 .net "COUT", 0 0, L_0118AA18; 1 drivers
+v010550C0_0 .net "SUM", 0 0, L_011837B8; 1 drivers
+v01054D50_0 .var/i "i", 31 0;
+v01055328_0 .var "name", 191 0;
+S_01188E10 .scope module, "dut" "full_adder" 2 7, 3 3, S_01189030;
+ .timescale 0 0;
+L_0118AA18 .functor OR 1, L_0118AAC0, L_01032A70, C4<0>, C4<0>;
+v01032A18_0 .net "A", 0 0, v01055170_0; 1 drivers
+v010551C8_0 .net "B", 0 0, v01055380_0; 1 drivers
+v01055118_0 .net "CARRY1", 0 0, L_0118AAC0; 1 drivers
+v01054C48_0 .net "CARRY2", 0 0, L_01032A70; 1 drivers
+v01054F08_0 .net "CIN", 0 0, v01054F60_0; 1 drivers
+v01054DA8_0 .alias "COUT", 0 0, v01055220_0;
+v01055068_0 .alias "SUM", 0 0, v010550C0_0;
+v01054E58_0 .net "SUM1", 0 0, L_0118AA88; 1 drivers
+S_011890B8 .scope module, "HA1" "half_adder" 3 6, 4 1, S_01188E10;
+ .timescale 0 0;
+L_0118AA88 .functor XOR 1, v01055170_0, v01055380_0, C4<0>, C4<0>;
+L_0118AAC0 .functor AND 1, v01055170_0, v01055380_0, C4<1>, C4<1>;
+v01033258_0 .alias "A", 0 0, v01032A18_0;
+v010332B0_0 .alias "B", 0 0, v010551C8_0;
+v01032968_0 .alias "CARRY", 0 0, v01055118_0;
+v010329C0_0 .alias "SUM", 0 0, v01054E58_0;
+S_01189828 .scope module, "HA2" "half_adder" 3 8, 4 1, S_01188E10;
+ .timescale 0 0;
+L_011837B8 .functor XOR 1, L_0118AA88, v01054F60_0, C4<0>, C4<0>;
+L_01032A70 .functor AND 1, L_0118AA88, v01054F60_0, C4<1>, C4<1>;
+v011836B0_0 .alias "A", 0 0, v01054E58_0;
+v01183708_0 .alias "B", 0 0, v01054F08_0;
+v01183760_0 .alias "CARRY", 0 0, v01054C48_0;
+v01033200_0 .alias "SUM", 0 0, v010550C0_0;
+    .scope S_01189030;
+T_0 ;
+    %movi 8, 842086453, 32;
+    %movi 40, 1734877234, 32;
+    %movi 72, 542337390, 32;
+    %movi 104, 1919969652, 32;
+    %movi 136, 1634869313, 32;
+    %movi 168, 1265987191, 32;
+    %movi 200, 32, 8;
+    %set/v v01055328_0, 8, 192;
+    %vpi_call 2 11 "$display", "Kunwar Arpit Singh";
+    %vpi_call 2 12 "$dumpfile", "assign1_problem3_full_adder.vcd";
+    %vpi_call 2 13 "$dumpvars", 2'sb01, S_01189030;
+    %vpi_call 2 14 "$display", "Kunwar Arpit Singh";
+    %vpi_call 2 15 "$display", "A B CIN | SUM COUT";
+    %vpi_call 2 16 "$display", "-------------------";
+    %set/v v01054D50_0, 0, 32;
+T_0.0 ;
+    %load/v 8, v01054D50_0, 32;
+   %cmpi/s 8, 8, 32;
+    %jmp/0xz T_0.1, 5;
+    %load/v 8, v01054D50_0, 32;
+    %set/v v01054F60_0, 8, 1;
+    %set/v v01055380_0, 9, 1;
+    %set/v v01055170_0, 10, 1;
+    %delay 10, 0;
+    %vpi_call 2 21 "$display", "%b %b %b |   %b   %b", v01055170_0, v01055380_0, v01054F60_0, v010550C0_0, v01055220_0;
+    %ix/load 0, 1, 0;
+    %load/vp0/s 8, v01054D50_0, 32;
+    %set/v v01054D50_0, 8, 32;
+    %jmp T_0.0;
+T_0.1 ;
+    %vpi_call 2 23 "$finish";
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 5;
+    "N/A";
+    "<interactive>";
+    "assign1_problem3_full_adder_tb.v";
+    "assign1_problem3_full_adder.v";
+    "./assign1_problem3_half_adder.v";

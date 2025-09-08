@@ -1,0 +1,66 @@
+$date
+	Sun Sep 07 21:45:46 2025
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module full_adder_tb $end
+$var wire 1 ! COUT $end
+$var wire 1 " SUM $end
+$var reg 1 # A $end
+$var reg 1 $ B $end
+$var reg 1 % CIN $end
+$var integer 32 & i [31:0] $end
+$var reg 192 ' name [191:0] $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b10010110111010101101110011101110110000101110010001000000100000101110010011100000110100101110100001000000101001101101001011011100110011101101000001000000011001000110010001100010011100000110101 '
+b0 &
+0%
+0$
+0#
+0"
+0!
+$end
+#10
+1"
+1%
+b1 &
+#20
+1"
+1$
+0%
+b10 &
+#30
+1!
+0"
+1%
+b11 &
+#40
+0!
+1"
+1#
+0$
+0%
+b100 &
+#50
+1!
+0"
+1%
+b101 &
+#60
+0"
+1$
+0%
+b110 &
+#70
+1"
+1%
+b111 &
+#80
+b1000 &

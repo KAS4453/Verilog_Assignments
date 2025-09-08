@@ -1,0 +1,125 @@
+#! /c/iverilog/bin/vvp
+:ivl_version "0.9.7 " "(v0_9_7)";
+:vpi_time_precision + 0;
+:vpi_module "system";
+:vpi_module "v2005_math";
+:vpi_module "va_math";
+S_01128420 .scope module, "mux_4_to_1_tb" "mux_4_to_1_tb" 2 1;
+ .timescale 0 0;
+v010308D8_0 .var "d_in", 3 0;
+v010305C0_0 .var "name", 191 0;
+v01030510_0 .var "s", 1 0;
+v01030568_0 .net "y", 0 0, L_01030DA8; 1 drivers
+S_011284A8 .scope module, "dut" "mux_4_to_1" 2 7, 3 1, S_01128420;
+ .timescale 0 0;
+L_0112B1C8 .functor NOT 1, L_01030930, C4<0>, C4<0>, C4<0>;
+L_01033C98 .functor NOT 1, L_01030358, C4<0>, C4<0>, C4<0>;
+L_01030E18 .functor AND 1, L_01031078, L_0112B1C8, L_01033C98, C4<1>;
+L_01030B40 .functor AND 1, L_01031128, L_01030FC8, L_01033C98, C4<1>;
+L_01030D38 .functor AND 1, L_01031910, L_0112B1C8, L_010318B8, C4<1>;
+L_01030C90 .functor AND 1, L_01031288, L_01031338, L_010319C0, C4<1>;
+L_01030DA8 .functor OR 1, L_01030E18, L_01030B40, L_01030D38, L_01030C90;
+v01025500_0 .net *"_s11", 0 0, L_01031128; 1 drivers
+v01023480_0 .net *"_s13", 0 0, L_01030FC8; 1 drivers
+v0112B118_0 .net *"_s16", 0 0, L_01031910; 1 drivers
+v01030408_0 .net *"_s18", 0 0, L_010318B8; 1 drivers
+v01030A38_0 .net *"_s2", 0 0, L_01030930; 1 drivers
+v01030300_0 .net *"_s21", 0 0, L_01031288; 1 drivers
+v01030618_0 .net *"_s23", 0 0, L_01031338; 1 drivers
+v01030988_0 .net *"_s25", 0 0, L_010319C0; 1 drivers
+v01030880_0 .net *"_s5", 0 0, L_01030358; 1 drivers
+v010306C8_0 .net *"_s8", 0 0, L_01031078; 1 drivers
+v01030670_0 .net "d_in", 3 0, v010308D8_0; 1 drivers
+v01030778_0 .net "s", 1 0, v01030510_0; 1 drivers
+v01030460_0 .net "s0_not", 0 0, L_0112B1C8; 1 drivers
+v010304B8_0 .net "s1_not", 0 0, L_01033C98; 1 drivers
+v01030720_0 .net "w0", 0 0, L_01030E18; 1 drivers
+v010307D0_0 .net "w1", 0 0, L_01030B40; 1 drivers
+v01030828_0 .net "w2", 0 0, L_01030D38; 1 drivers
+v010303B0_0 .net "w3", 0 0, L_01030C90; 1 drivers
+v010309E0_0 .alias "y", 0 0, v01030568_0;
+L_01030930 .part v01030510_0, 0, 1;
+L_01030358 .part v01030510_0, 1, 1;
+L_01031078 .part v010308D8_0, 0, 1;
+L_01031128 .part v010308D8_0, 1, 1;
+L_01030FC8 .part v01030510_0, 0, 1;
+L_01031910 .part v010308D8_0, 2, 1;
+L_010318B8 .part v01030510_0, 1, 1;
+L_01031288 .part v010308D8_0, 3, 1;
+L_01031338 .part v01030510_0, 0, 1;
+L_010319C0 .part v01030510_0, 1, 1;
+    .scope S_01128420;
+T_0 ;
+    %movi 8, 842086453, 32;
+    %movi 40, 1734877234, 32;
+    %movi 72, 542337390, 32;
+    %movi 104, 1919969652, 32;
+    %movi 136, 1634869313, 32;
+    %movi 168, 1265987191, 32;
+    %movi 200, 32, 8;
+    %set/v v010305C0_0, 8, 192;
+    %vpi_call 2 11 "$display", "Kunwar Arpit Singh";
+    %vpi_call 2 12 "$dumpfile", "assign1_problem4_mux_4_to_1.vcd";
+    %vpi_call 2 13 "$dumpvars", 2'sb01, S_01128420;
+    %movi 8, 10, 4;
+    %set/v v010308D8_0, 8, 4;
+    %vpi_call 2 17 "$display", "s1 | s0 | y (selected data)";
+    %vpi_call 2 18 "$display", "-----------------------";
+    %set/v v01030510_0, 0, 2;
+    %delay 10, 0;
+    %vpi_call 2 21 "$display", " %b | %b |  %b (d0)", &PV<v01030510_0, 1, 1>, &PV<v01030510_0, 0, 1>, v01030568_0;
+    %movi 8, 1, 2;
+    %set/v v01030510_0, 8, 2;
+    %delay 10, 0;
+    %vpi_call 2 24 "$display", " %b | %b |  %b (d1)", &PV<v01030510_0, 1, 1>, &PV<v01030510_0, 0, 1>, v01030568_0;
+    %movi 8, 2, 2;
+    %set/v v01030510_0, 8, 2;
+    %delay 10, 0;
+    %vpi_call 2 27 "$display", " %b | %b |  %b (d2)", &PV<v01030510_0, 1, 1>, &PV<v01030510_0, 0, 1>, v01030568_0;
+    %set/v v01030510_0, 1, 2;
+    %delay 10, 0;
+    %vpi_call 2 30 "$display", " %b | %b |  %b (d3)", &PV<v01030510_0, 1, 1>, &PV<v01030510_0, 0, 1>, v01030568_0;
+    %movi 8, 5, 4;
+    %set/v v010308D8_0, 8, 4;
+    %vpi_call 2 34 "$display", "s1 | s0 | y (selected data)";
+    %vpi_call 2 35 "$display", "-----------------------";
+    %set/v v01030510_0, 0, 2;
+    %delay 10, 0;
+    %vpi_call 2 38 "$display", " %b | %b |  %b (d0)", &PV<v01030510_0, 1, 1>, &PV<v01030510_0, 0, 1>, v01030568_0;
+    %movi 8, 1, 2;
+    %set/v v01030510_0, 8, 2;
+    %delay 10, 0;
+    %vpi_call 2 41 "$display", " %b | %b |  %b (d1)", &PV<v01030510_0, 1, 1>, &PV<v01030510_0, 0, 1>, v01030568_0;
+    %movi 8, 2, 2;
+    %set/v v01030510_0, 8, 2;
+    %delay 10, 0;
+    %vpi_call 2 44 "$display", " %b | %b |  %b (d2)", &PV<v01030510_0, 1, 1>, &PV<v01030510_0, 0, 1>, v01030568_0;
+    %set/v v01030510_0, 1, 2;
+    %delay 10, 0;
+    %vpi_call 2 47 "$display", " %b | %b |  %b (d3)", &PV<v01030510_0, 1, 1>, &PV<v01030510_0, 0, 1>, v01030568_0;
+    %set/v v010308D8_0, 1, 4;
+    %vpi_call 2 51 "$display", "s1 | s0 | y (selected data)";
+    %vpi_call 2 52 "$display", "-----------------------";
+    %set/v v01030510_0, 0, 2;
+    %delay 10, 0;
+    %vpi_call 2 55 "$display", " %b | %b |  %b (d0)", &PV<v01030510_0, 1, 1>, &PV<v01030510_0, 0, 1>, v01030568_0;
+    %movi 8, 1, 2;
+    %set/v v01030510_0, 8, 2;
+    %delay 10, 0;
+    %vpi_call 2 58 "$display", " %b | %b |  %b (d1)", &PV<v01030510_0, 1, 1>, &PV<v01030510_0, 0, 1>, v01030568_0;
+    %movi 8, 2, 2;
+    %set/v v01030510_0, 8, 2;
+    %delay 10, 0;
+    %vpi_call 2 61 "$display", " %b | %b |  %b (d2)", &PV<v01030510_0, 1, 1>, &PV<v01030510_0, 0, 1>, v01030568_0;
+    %set/v v01030510_0, 1, 2;
+    %delay 10, 0;
+    %vpi_call 2 64 "$display", " %b | %b |  %b (d3)", &PV<v01030510_0, 1, 1>, &PV<v01030510_0, 0, 1>, v01030568_0;
+    %vpi_call 2 66 "$finish";
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "assign1_problem4_4_to_1_multiplexer_tb.v";
+    "assign1_problem4_4_to_1_multiplexer.v";

@@ -1,0 +1,42 @@
+$date
+	Mon Sep 08 19:49:05 2025
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module barrel_shifter_4bit_tb $end
+$var wire 4 ! out [3:0] $end
+$var reg 4 " A [3:0] $end
+$var reg 1 # dir $end
+$var reg 192 $ name [191:0] $end
+$var reg 2 % sel [1:0] $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b0 %
+b10010110111010101101110011101110110000101110010001000000100000101110010011100000110100101110100001000000101001101101001011011100110011101101000001000000011001000110010001100010011100000110101 $
+0#
+b1011 "
+b1011 !
+$end
+#10
+b110 !
+b1 %
+#20
+b1100 !
+b10 %
+#30
+b1011 !
+b0 %
+1#
+#40
+b101 !
+b1 %
+#50
+b10 !
+b10 %
+#60

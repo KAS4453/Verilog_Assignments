@@ -1,0 +1,87 @@
+#! /c/iverilog/bin/vvp
+:ivl_version "0.9.7 " "(v0_9_7)";
+:vpi_time_precision + 0;
+:vpi_module "system";
+:vpi_module "v2005_math";
+:vpi_module "va_math";
+S_010A2AA8 .scope module, "or_gate_3_input_tb" "or_gate_3_input_tb" 2 1;
+ .timescale 0 0;
+v0106EEA8_0 .var "A", 0 0;
+v0106EF00_0 .var "B", 0 0;
+v0106EF58_0 .var "C", 0 0;
+v0106CCD8_0 .net "Y", 0 0, L_0106CDC0; 1 drivers
+v0106CD30_0 .var "name", 191 0;
+S_010636B0 .scope module, "dut" "or_gate_3_input" 2 5, 3 1, S_010A2AA8;
+ .timescale 0 0;
+L_0106EFB0 .functor OR 1, v0106EEA8_0, v0106EF00_0, C4<0>, C4<0>;
+L_0106CDC0 .functor OR 1, L_0106EFB0, v0106EF58_0, C4<0>, C4<0>;
+v01063738_0 .net "A", 0 0, v0106EEA8_0; 1 drivers
+v01063790_0 .net "B", 0 0, v0106EF00_0; 1 drivers
+v0106BA48_0 .net "C", 0 0, v0106EF58_0; 1 drivers
+v0106BAA0_0 .alias "Y", 0 0, v0106CCD8_0;
+v0106EE50_0 .net "w1", 0 0, L_0106EFB0; 1 drivers
+    .scope S_010A2AA8;
+T_0 ;
+    %movi 8, 842086453, 32;
+    %movi 40, 1734877234, 32;
+    %movi 72, 542337390, 32;
+    %movi 104, 1919969652, 32;
+    %movi 136, 1634869313, 32;
+    %movi 168, 1265987191, 32;
+    %movi 200, 32, 8;
+    %set/v v0106CD30_0, 8, 192;
+    %vpi_call 2 9 "$display", "Kunwar Arpit Singh";
+    %vpi_call 2 10 "$dumpfile", "assign1_problem1_or_gate_3_input.vcd";
+    %vpi_call 2 11 "$dumpvars", 2'sb01, S_010A2AA8;
+    %vpi_call 2 13 "$display", "Kunwar Arpit Singh";
+    %vpi_call 2 14 "$display", "A | B | C | Y";
+    %vpi_call 2 15 "$display", "-----------------";
+    %set/v v0106EEA8_0, 0, 1;
+    %set/v v0106EF00_0, 0, 1;
+    %set/v v0106EF58_0, 0, 1;
+    %delay 10, 0;
+    %vpi_call 2 18 "$display", "%b | %b | %b | %b", v0106EEA8_0, v0106EF00_0, v0106EF58_0, v0106CCD8_0;
+    %set/v v0106EEA8_0, 0, 1;
+    %set/v v0106EF00_0, 0, 1;
+    %set/v v0106EF58_0, 1, 1;
+    %delay 10, 0;
+    %vpi_call 2 21 "$display", "%b | %b | %b | %b", v0106EEA8_0, v0106EF00_0, v0106EF58_0, v0106CCD8_0;
+    %set/v v0106EEA8_0, 0, 1;
+    %set/v v0106EF00_0, 1, 1;
+    %set/v v0106EF58_0, 0, 1;
+    %delay 10, 0;
+    %vpi_call 2 24 "$display", "%b | %b | %b | %b", v0106EEA8_0, v0106EF00_0, v0106EF58_0, v0106CCD8_0;
+    %set/v v0106EEA8_0, 0, 1;
+    %set/v v0106EF00_0, 1, 1;
+    %set/v v0106EF58_0, 1, 1;
+    %delay 10, 0;
+    %vpi_call 2 27 "$display", "%b | %b | %b | %b", v0106EEA8_0, v0106EF00_0, v0106EF58_0, v0106CCD8_0;
+    %set/v v0106EEA8_0, 1, 1;
+    %set/v v0106EF00_0, 0, 1;
+    %set/v v0106EF58_0, 0, 1;
+    %delay 10, 0;
+    %vpi_call 2 30 "$display", "%b | %b | %b | %b", v0106EEA8_0, v0106EF00_0, v0106EF58_0, v0106CCD8_0;
+    %set/v v0106EEA8_0, 1, 1;
+    %set/v v0106EF00_0, 0, 1;
+    %set/v v0106EF58_0, 1, 1;
+    %delay 10, 0;
+    %vpi_call 2 33 "$display", "%b | %b | %b | %b", v0106EEA8_0, v0106EF00_0, v0106EF58_0, v0106CCD8_0;
+    %set/v v0106EEA8_0, 1, 1;
+    %set/v v0106EF00_0, 1, 1;
+    %set/v v0106EF58_0, 0, 1;
+    %delay 10, 0;
+    %vpi_call 2 36 "$display", "%b | %b | %b | %b", v0106EEA8_0, v0106EF00_0, v0106EF58_0, v0106CCD8_0;
+    %set/v v0106EEA8_0, 1, 1;
+    %set/v v0106EF00_0, 1, 1;
+    %set/v v0106EF58_0, 1, 1;
+    %delay 10, 0;
+    %vpi_call 2 39 "$display", "%b | %b | %b | %b", v0106EEA8_0, v0106EF00_0, v0106EF58_0, v0106CCD8_0;
+    %vpi_call 2 41 "$finish";
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "assign1_problem1_or_tb.v";
+    "assign1_problem1_or.v";

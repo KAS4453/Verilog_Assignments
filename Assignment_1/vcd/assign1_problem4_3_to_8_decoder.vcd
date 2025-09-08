@@ -1,0 +1,72 @@
+$date
+	Mon Sep 08 00:10:25 2025
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module decoder_3_to_8_tb $end
+$var wire 1 ! y0 $end
+$var wire 1 " y1 $end
+$var wire 1 # y2 $end
+$var wire 1 $ y3 $end
+$var wire 1 % y4 $end
+$var wire 1 & y5 $end
+$var wire 1 ' y6 $end
+$var wire 1 ( y7 $end
+$var reg 1 ) d0 $end
+$var reg 1 * d1 $end
+$var reg 1 + d2 $end
+$var reg 192 , name [191:0] $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b10010110111010101101110011101110110000101110010001000000100000101110010011100000110100101110100001000000101001101101001011011100110011101101000001000000011001000110010001100010011100000110101 ,
+0+
+0*
+0)
+0(
+0'
+0&
+0%
+0$
+0#
+0"
+1!
+$end
+#10
+0!
+1"
+1)
+#20
+1#
+0"
+1*
+0)
+#30
+0#
+1$
+1)
+#40
+1%
+0$
+1+
+0*
+0)
+#50
+0%
+1&
+1)
+#60
+1'
+0&
+1*
+0)
+#70
+0'
+1(
+1)
+#80

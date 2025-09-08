@@ -1,0 +1,37 @@
+$date
+	Sun Sep 07 21:54:30 2025
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module half_subtractor_tb $end
+$var wire 1 ! borrow_out $end
+$var wire 1 " diff $end
+$var reg 1 # A $end
+$var reg 1 $ B $end
+$var reg 192 % name [191:0] $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b10010110111010101101110011101110110000101110010001000000100000101110010011100000110100101110100001000000101001101101001011011100110011101101000001000000011001000110010001100010011100000110101 %
+0$
+0#
+0"
+0!
+$end
+#10
+1"
+1!
+1$
+#20
+0!
+0$
+1#
+#30
+0"
+1$
+#40

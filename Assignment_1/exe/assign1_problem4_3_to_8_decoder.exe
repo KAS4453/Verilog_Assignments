@@ -1,0 +1,159 @@
+#! /c/iverilog/bin/vvp
+:ivl_version "0.9.7 " "(v0_9_7)";
+:vpi_time_precision + 0;
+:vpi_module "system";
+:vpi_module "v2005_math";
+:vpi_module "va_math";
+S_009A7D38 .scope module, "decoder_3_to_8_tb" "decoder_3_to_8_tb" 2 1;
+ .timescale 0 0;
+v011C1088_0 .var "d0", 0 0;
+v011C0D70_0 .var "d1", 0 0;
+v011C0690_0 .var "d2", 0 0;
+v011C06E8_0 .var "name", 191 0;
+v011C0F28_0 .net "y0", 0 0, L_011F7B78; 1 drivers
+v011C07F0_0 .net "y1", 0 0, L_011F7B20; 1 drivers
+v011C0FD8_0 .net "y2", 0 0, L_011F7860; 1 drivers
+v011C0798_0 .net "y3", 0 0, L_011F7BD0; 1 drivers
+v011C0848_0 .net "y4", 0 0, L_011F7808; 1 drivers
+v011C08A0_0 .net "y5", 0 0, L_011F77B0; 1 drivers
+v011C08F8_0 .net "y6", 0 0, L_011F7AC8; 1 drivers
+v011C0950_0 .net "y7", 0 0, L_011F7758; 1 drivers
+L_011F7910 .concat [ 1 1 1 0], v011C1088_0, v011C0D70_0, v011C0690_0;
+RS_011C6264/0/0 .resolv tri, L_011C0AB0, L_011C0B08, L_011C0BB8, L_011C1298;
+RS_011C6264/0/4 .resolv tri, L_011C13A0, L_011C1500, L_011C1190, L_011C1348;
+RS_011C6264 .resolv tri, RS_011C6264/0/0, RS_011C6264/0/4, C4<zzzzzzzz>, C4<zzzzzzzz>;
+L_011F7758 .part RS_011C6264, 7, 1;
+L_011F7AC8 .part RS_011C6264, 6, 1;
+L_011F77B0 .part RS_011C6264, 5, 1;
+L_011F7808 .part RS_011C6264, 4, 1;
+L_011F7BD0 .part RS_011C6264, 3, 1;
+L_011F7860 .part RS_011C6264, 2, 1;
+L_011F7B20 .part RS_011C6264, 1, 1;
+L_011F7B78 .part RS_011C6264, 0, 1;
+S_011B84C0 .scope module, "dut" "decoder_3_to_8" 2 5, 3 1, S_009A7D38;
+ .timescale 0 0;
+L_009AEDB0 .functor NOT 1, L_011C09A8, C4<0>, C4<0>, C4<0>;
+L_009AEE58 .functor NOT 1, L_011C0A00, C4<0>, C4<0>, C4<0>;
+L_011C1A18 .functor NOT 1, L_011C0A58, C4<0>, C4<0>, C4<0>;
+L_011C1BD8 .functor AND 1, L_009AEDB0, L_009AEE58, L_011C1A18, C4<1>;
+L_011C1C48 .functor AND 1, L_011C0B60, L_009AEE58, L_011C1A18, C4<1>;
+L_011C1970 .functor AND 1, L_009AEDB0, L_011C0C10, L_011C1A18, C4<1>;
+L_011C1CB8 .functor AND 1, L_011C1240, L_011C1558, L_011C1A18, C4<1>;
+L_011C1AC0 .functor AND 1, L_009AEDB0, L_009AEE58, L_011C1608, C4<1>;
+L_011C1820 .functor AND 1, L_011C15B0, L_009AEE58, L_011C1450, C4<1>;
+L_011C1B30 .functor AND 1, L_009AEDB0, L_011C11E8, L_011C12F0, C4<1>;
+L_011C1CF0 .functor AND 1, L_011C14A8, L_011C13F8, L_011F7A70, C4<1>;
+v009A9AA8_0 .net *"_s10", 0 0, L_011C1BD8; 1 drivers
+v009A9790_0 .net *"_s13", 0 0, L_011C1C48; 1 drivers
+v009A9B00_0 .net *"_s16", 0 0, L_011C0B60; 1 drivers
+v009A9C08_0 .net *"_s18", 0 0, L_011C1970; 1 drivers
+v009A9840_0 .net *"_s2", 0 0, L_011C09A8; 1 drivers
+v009A9E18_0 .net *"_s21", 0 0, L_011C0C10; 1 drivers
+v009A9B58_0 .net *"_s23", 0 0, L_011C1CB8; 1 drivers
+v009A99A0_0 .net *"_s26", 0 0, L_011C1240; 1 drivers
+v009A9D68_0 .net *"_s28", 0 0, L_011C1558; 1 drivers
+v009A9C60_0 .net *"_s30", 0 0, L_011C1AC0; 1 drivers
+v009A9DC0_0 .net *"_s33", 0 0, L_011C1608; 1 drivers
+v009A97E8_0 .net *"_s35", 0 0, L_011C1820; 1 drivers
+v009A9CB8_0 .net *"_s38", 0 0, L_011C15B0; 1 drivers
+v009A9D10_0 .net *"_s40", 0 0, L_011C1450; 1 drivers
+v009A9E70_0 .net *"_s42", 0 0, L_011C1B30; 1 drivers
+v009A9898_0 .net *"_s45", 0 0, L_011C11E8; 1 drivers
+v011C10E0_0 .net *"_s47", 0 0, L_011C12F0; 1 drivers
+v011C0F80_0 .net *"_s49", 0 0, L_011C1CF0; 1 drivers
+v011C0DC8_0 .net *"_s5", 0 0, L_011C0A00; 1 drivers
+v011C0E20_0 .net *"_s52", 0 0, L_011C14A8; 1 drivers
+v011C0C68_0 .net *"_s54", 0 0, L_011C13F8; 1 drivers
+v011C0740_0 .net *"_s56", 0 0, L_011F7A70; 1 drivers
+v011C0CC0_0 .net *"_s8", 0 0, L_011C0A58; 1 drivers
+v011C0ED0_0 .net "d", 2 0, L_011F7910; 1 drivers
+v011C1138_0 .net "d0_not", 0 0, L_009AEDB0; 1 drivers
+v011C0D18_0 .net "d1_not", 0 0, L_009AEE58; 1 drivers
+v011C1030_0 .net "d2_not", 0 0, L_011C1A18; 1 drivers
+v011C0E78_0 .net8 "y", 7 0, RS_011C6264; 8 drivers
+L_011C09A8 .part L_011F7910, 0, 1;
+L_011C0A00 .part L_011F7910, 1, 1;
+L_011C0A58 .part L_011F7910, 2, 1;
+L_011C0AB0 .part/pv L_011C1BD8, 0, 1, 8;
+L_011C0B08 .part/pv L_011C1C48, 1, 1, 8;
+L_011C0B60 .part L_011F7910, 0, 1;
+L_011C0BB8 .part/pv L_011C1970, 2, 1, 8;
+L_011C0C10 .part L_011F7910, 1, 1;
+L_011C1298 .part/pv L_011C1CB8, 3, 1, 8;
+L_011C1240 .part L_011F7910, 0, 1;
+L_011C1558 .part L_011F7910, 1, 1;
+L_011C13A0 .part/pv L_011C1AC0, 4, 1, 8;
+L_011C1608 .part L_011F7910, 2, 1;
+L_011C1500 .part/pv L_011C1820, 5, 1, 8;
+L_011C15B0 .part L_011F7910, 0, 1;
+L_011C1450 .part L_011F7910, 2, 1;
+L_011C1190 .part/pv L_011C1B30, 6, 1, 8;
+L_011C11E8 .part L_011F7910, 1, 1;
+L_011C12F0 .part L_011F7910, 2, 1;
+L_011C1348 .part/pv L_011C1CF0, 7, 1, 8;
+L_011C14A8 .part L_011F7910, 0, 1;
+L_011C13F8 .part L_011F7910, 1, 1;
+L_011F7A70 .part L_011F7910, 2, 1;
+    .scope S_009A7D38;
+T_0 ;
+    %movi 8, 842086453, 32;
+    %movi 40, 1734877234, 32;
+    %movi 72, 542337390, 32;
+    %movi 104, 1919969652, 32;
+    %movi 136, 1634869313, 32;
+    %movi 168, 1265987191, 32;
+    %movi 200, 32, 8;
+    %set/v v011C06E8_0, 8, 192;
+    %vpi_call 2 9 "$display", "Kunwar Arpit Singh";
+    %vpi_call 2 10 "$dumpfile", "assign1_problem4_3_to_8_decoder.vcd";
+    %vpi_call 2 11 "$dumpvars", 2'sb01, S_009A7D38;
+    %vpi_call 2 13 "$display", "d2 | d1 | d0 || y7 | y6 | y5 | y4 | y3 | y2 | y1 | y0";
+    %vpi_call 2 14 "$display", "-------------------------------";
+    %set/v v011C1088_0, 0, 1;
+    %set/v v011C0D70_0, 0, 1;
+    %set/v v011C0690_0, 0, 1;
+    %delay 10, 0;
+    %vpi_call 2 16 "$display", "%b  | %b  | %b  || %b | %b | %b | %b | %b | %b | %b | %b", v011C0690_0, v011C0D70_0, v011C1088_0, v011C0950_0, v011C08F8_0, v011C08A0_0, v011C0848_0, v011C0798_0, v011C0FD8_0, v011C07F0_0, v011C0F28_0;
+    %set/v v011C1088_0, 1, 1;
+    %set/v v011C0D70_0, 0, 1;
+    %set/v v011C0690_0, 0, 1;
+    %delay 10, 0;
+    %vpi_call 2 18 "$display", "%b  | %b  | %b  || %b | %b | %b | %b | %b | %b | %b | %b", v011C0690_0, v011C0D70_0, v011C1088_0, v011C0950_0, v011C08F8_0, v011C08A0_0, v011C0848_0, v011C0798_0, v011C0FD8_0, v011C07F0_0, v011C0F28_0;
+    %set/v v011C1088_0, 0, 1;
+    %set/v v011C0D70_0, 1, 1;
+    %set/v v011C0690_0, 0, 1;
+    %delay 10, 0;
+    %vpi_call 2 20 "$display", "%b  | %b  | %b  || %b | %b | %b | %b | %b | %b | %b | %b", v011C0690_0, v011C0D70_0, v011C1088_0, v011C0950_0, v011C08F8_0, v011C08A0_0, v011C0848_0, v011C0798_0, v011C0FD8_0, v011C07F0_0, v011C0F28_0;
+    %set/v v011C1088_0, 1, 1;
+    %set/v v011C0D70_0, 1, 1;
+    %set/v v011C0690_0, 0, 1;
+    %delay 10, 0;
+    %vpi_call 2 22 "$display", "%b  | %b  | %b  || %b | %b | %b | %b | %b | %b | %b | %b", v011C0690_0, v011C0D70_0, v011C1088_0, v011C0950_0, v011C08F8_0, v011C08A0_0, v011C0848_0, v011C0798_0, v011C0FD8_0, v011C07F0_0, v011C0F28_0;
+    %set/v v011C1088_0, 0, 1;
+    %set/v v011C0D70_0, 0, 1;
+    %set/v v011C0690_0, 1, 1;
+    %delay 10, 0;
+    %vpi_call 2 24 "$display", "%b  | %b  | %b  || %b | %b | %b | %b | %b | %b | %b | %b", v011C0690_0, v011C0D70_0, v011C1088_0, v011C0950_0, v011C08F8_0, v011C08A0_0, v011C0848_0, v011C0798_0, v011C0FD8_0, v011C07F0_0, v011C0F28_0;
+    %set/v v011C1088_0, 1, 1;
+    %set/v v011C0D70_0, 0, 1;
+    %set/v v011C0690_0, 1, 1;
+    %delay 10, 0;
+    %vpi_call 2 26 "$display", "%b  | %b  | %b  || %b | %b | %b | %b | %b | %b | %b | %b", v011C0690_0, v011C0D70_0, v011C1088_0, v011C0950_0, v011C08F8_0, v011C08A0_0, v011C0848_0, v011C0798_0, v011C0FD8_0, v011C07F0_0, v011C0F28_0;
+    %set/v v011C1088_0, 0, 1;
+    %set/v v011C0D70_0, 1, 1;
+    %set/v v011C0690_0, 1, 1;
+    %delay 10, 0;
+    %vpi_call 2 28 "$display", "%b  | %b  | %b  || %b | %b | %b | %b | %b | %b | %b | %b", v011C0690_0, v011C0D70_0, v011C1088_0, v011C0950_0, v011C08F8_0, v011C08A0_0, v011C0848_0, v011C0798_0, v011C0FD8_0, v011C07F0_0, v011C0F28_0;
+    %set/v v011C1088_0, 1, 1;
+    %set/v v011C0D70_0, 1, 1;
+    %set/v v011C0690_0, 1, 1;
+    %delay 10, 0;
+    %vpi_call 2 30 "$display", "%b  | %b  | %b  || %b | %b | %b | %b | %b | %b | %b | %b", v011C0690_0, v011C0D70_0, v011C1088_0, v011C0950_0, v011C08F8_0, v011C08A0_0, v011C0848_0, v011C0798_0, v011C0FD8_0, v011C07F0_0, v011C0F28_0;
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "assign1_problem4_3_to_8_decoder_tb2.v";
+    ".\assign1_problem4_3_to_8_decoder.v";

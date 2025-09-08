@@ -1,0 +1,42 @@
+$date
+	Sun Sep 07 22:48:14 2025
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module mux_4_to_1_tb $end
+$var wire 1 ! y $end
+$var reg 1 " d0 $end
+$var reg 1 # d1 $end
+$var reg 1 $ d2 $end
+$var reg 1 % d3 $end
+$var reg 192 & name [191:0] $end
+$var reg 1 ' s0 $end
+$var reg 1 ( s1 $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0(
+0'
+b10010110111010101101110011101110110000101110010001000000100000101110010011100000110100101110100001000000101001101101001011011100110011101101000001000000011001000110010001100010011100000110101 &
+0%
+1$
+0#
+1"
+x!
+$end
+#10
+0!
+1'
+#20
+1!
+0'
+1(
+#30
+0!
+1'
+#40

@@ -1,0 +1,130 @@
+#! /c/iverilog/bin/vvp
+:ivl_version "0.9.7 " "(v0_9_7)";
+:vpi_time_precision + 0;
+:vpi_module "system";
+:vpi_module "v2005_math";
+:vpi_module "va_math";
+S_00922C58 .scope module, "barrel_shifter_4bit_tb" "barrel_shifter_4bit_tb" 2 1;
+ .timescale 0 0;
+v00931040_0 .var "A", 3 0;
+v00930648_0 .var "dir", 0 0;
+v00930438_0 .var "name", 191 0;
+v009309B8_0 .net "out", 3 0, L_00930B70; 1 drivers
+v00930490_0 .var "sel", 1 0;
+S_00922A38 .scope module, "dut" "barrel_shifter_4bit" 2 8, 3 9, S_00922C58;
+ .timescale 0 0;
+v012F9AD8_0 .net "A", 3 0, v00931040_0; 1 drivers
+v012F9C38_0 .net *"_s1", 2 0, L_009308B0; 1 drivers
+v012FA058_0 .net *"_s12", 1 0, C4<00>; 1 drivers
+v012F9E48_0 .net *"_s14", 0 0, L_00930AC0; 1 drivers
+v012F9D40_0 .net *"_s16", 1 0, C4<01>; 1 drivers
+v012FA0B0_0 .net *"_s18", 0 0, L_00930540; 1 drivers
+v012F99D0_0 .net *"_s2", 0 0, C4<0>; 1 drivers
+v012F9BE0_0 .net *"_s20", 3 0, L_00930A10; 1 drivers
+v012F9B30_0 .net *"_s24", 0 0, C4<0>; 1 drivers
+v012F9D98_0 .net *"_s27", 2 0, L_009303E0; 1 drivers
+v012F9C90_0 .net *"_s30", 1 0, C4<00>; 1 drivers
+v012F9F50_0 .net *"_s33", 1 0, L_00930B18; 1 drivers
+v012F9EA0_0 .net *"_s36", 1 0, C4<00>; 1 drivers
+v012F9B88_0 .net *"_s38", 0 0, L_00930A68; 1 drivers
+v012F9A80_0 .net *"_s40", 1 0, C4<01>; 1 drivers
+v012F9CE8_0 .net *"_s42", 0 0, L_009306A0; 1 drivers
+v012F9EF8_0 .net *"_s44", 3 0, L_00930330; 1 drivers
+v012FA000_0 .net *"_s48", 1 0, L_00930750; 1 drivers
+v012F9A28_0 .net *"_s51", 0 0, C4<0>; 1 drivers
+v00930F38_0 .net *"_s52", 1 0, C4<00>; 1 drivers
+v00930D80_0 .net *"_s54", 0 0, L_00930598; 1 drivers
+v00931098_0 .net *"_s7", 1 0, L_009307A8; 1 drivers
+v00930D28_0 .net *"_s8", 1 0, C4<00>; 1 drivers
+v00930F90_0 .net "dir", 0 0, v00930648_0; 1 drivers
+v00930C20_0 .net "left1", 3 0, L_009306F8; 1 drivers
+v00930DD8_0 .net "left2", 3 0, L_00930800; 1 drivers
+v00930C78_0 .alias "out", 3 0, v009309B8_0;
+v00930CD0_0 .net "right1", 3 0, L_009304E8; 1 drivers
+v00930FE8_0 .net "right2", 3 0, L_00930858; 1 drivers
+v00930E30_0 .net "sel", 1 0, v00930490_0; 1 drivers
+v00930E88_0 .net "sel_left", 3 0, L_00930908; 1 drivers
+v00930EE0_0 .net "sel_right", 3 0, L_00930960; 1 drivers
+L_009308B0 .part v00931040_0, 0, 3;
+L_009306F8 .concat [ 1 3 0 0], C4<0>, L_009308B0;
+L_009307A8 .part v00931040_0, 0, 2;
+L_00930800 .concat [ 2 2 0 0], C4<00>, L_009307A8;
+L_00930AC0 .cmp/eq 2, v00930490_0, C4<00>;
+L_00930540 .cmp/eq 2, v00930490_0, C4<01>;
+L_00930A10 .functor MUXZ 4, L_00930800, L_009306F8, L_00930540, C4<>;
+L_00930908 .functor MUXZ 4, L_00930A10, v00931040_0, L_00930AC0, C4<>;
+L_009303E0 .part v00931040_0, 1, 3;
+L_009304E8 .concat [ 3 1 0 0], L_009303E0, C4<0>;
+L_00930B18 .part v00931040_0, 2, 2;
+L_00930858 .concat [ 2 2 0 0], L_00930B18, C4<00>;
+L_00930A68 .cmp/eq 2, v00930490_0, C4<00>;
+L_009306A0 .cmp/eq 2, v00930490_0, C4<01>;
+L_00930330 .functor MUXZ 4, L_00930858, L_009304E8, L_009306A0, C4<>;
+L_00930960 .functor MUXZ 4, L_00930330, v00931040_0, L_00930A68, C4<>;
+L_00930750 .concat [ 1 1 0 0], v00930648_0, C4<0>;
+L_00930598 .cmp/eq 2, L_00930750, C4<00>;
+L_00930B70 .functor MUXZ 4, L_00930960, L_00930908, L_00930598, C4<>;
+    .scope S_00922C58;
+T_0 ;
+    %movi 8, 842086453, 32;
+    %movi 40, 1734877234, 32;
+    %movi 72, 542337390, 32;
+    %movi 104, 1919969652, 32;
+    %movi 136, 1634869313, 32;
+    %movi 168, 1265987191, 32;
+    %movi 200, 32, 8;
+    %set/v v00930438_0, 8, 192;
+    %vpi_call 2 13 "$display", "Kunwar Arpit Singh";
+    %vpi_call 2 14 "$dumpfile", "assign1_problem5_barrel_shifter_tb.vcd";
+    %vpi_call 2 15 "$dumpvars", 2'sb01, S_00922C58;
+    %vpi_call 2 17 "$display", "A | dir | Shift by | out";
+    %vpi_call 2 18 "$display", "---------------------";
+    %movi 8, 11, 4;
+    %set/v v00931040_0, 8, 4;
+    %set/v v00930648_0, 0, 1;
+    %set/v v00930490_0, 0, 2;
+    %delay 10, 0;
+    %vpi_call 2 21 "$display", "%b | left  | %0d    | %b", v00931040_0, v00930490_0, v009309B8_0;
+    %movi 8, 11, 4;
+    %set/v v00931040_0, 8, 4;
+    %set/v v00930648_0, 0, 1;
+    %movi 8, 1, 2;
+    %set/v v00930490_0, 8, 2;
+    %delay 10, 0;
+    %vpi_call 2 24 "$display", "%b | left  | %0d    | %b", v00931040_0, v00930490_0, v009309B8_0;
+    %movi 8, 11, 4;
+    %set/v v00931040_0, 8, 4;
+    %set/v v00930648_0, 0, 1;
+    %movi 8, 2, 2;
+    %set/v v00930490_0, 8, 2;
+    %delay 10, 0;
+    %vpi_call 2 27 "$display", "%b | left  | %0d    | %b", v00931040_0, v00930490_0, v009309B8_0;
+    %movi 8, 11, 4;
+    %set/v v00931040_0, 8, 4;
+    %set/v v00930648_0, 1, 1;
+    %set/v v00930490_0, 0, 2;
+    %delay 10, 0;
+    %vpi_call 2 30 "$display", "%b | right | %0d    | %b", v00931040_0, v00930490_0, v009309B8_0;
+    %movi 8, 11, 4;
+    %set/v v00931040_0, 8, 4;
+    %set/v v00930648_0, 1, 1;
+    %movi 8, 1, 2;
+    %set/v v00930490_0, 8, 2;
+    %delay 10, 0;
+    %vpi_call 2 33 "$display", "%b | right | %0d    | %b", v00931040_0, v00930490_0, v009309B8_0;
+    %movi 8, 11, 4;
+    %set/v v00931040_0, 8, 4;
+    %set/v v00930648_0, 1, 1;
+    %movi 8, 2, 2;
+    %set/v v00930490_0, 8, 2;
+    %delay 10, 0;
+    %vpi_call 2 36 "$display", "%b | right | %0d    | %b", v00931040_0, v00930490_0, v009309B8_0;
+    %vpi_call 2 37 "$finish";
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    ".\assign1_problem5_barrel_shifter_tb.v";
+    ".\assign1_problem5_barrel_shifter.v";

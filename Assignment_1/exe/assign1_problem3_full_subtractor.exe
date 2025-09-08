@@ -1,0 +1,87 @@
+#! /c/iverilog/bin/vvp
+:ivl_version "0.9.7 " "(v0_9_7)";
+:vpi_time_precision + 0;
+:vpi_module "system";
+:vpi_module "v2005_math";
+:vpi_module "va_math";
+S_00A28FC0 .scope module, "full_subtractor_tb" "full_subtractor_tb" 2 1;
+ .timescale 0 0;
+v00964C38_0 .var "A", 0 0;
+v00964DF0_0 .var "B", 0 0;
+v00964EF8_0 .var "borrow_in", 0 0;
+v00965160_0 .net "borrow_out", 0 0, L_00943358; 1 drivers
+v00964F50_0 .net "diff", 0 0, L_00943320; 1 drivers
+v00965000_0 .var/i "i", 31 0;
+v009650B0_0 .var "name", 191 0;
+S_00A28DA0 .scope module, "dut" "full_subtractor" 2 8, 3 2, S_00A28FC0;
+ .timescale 0 0;
+L_00943358 .functor OR 1, L_00943438, L_00942AD8, C4<0>, C4<0>;
+v009652C0_0 .net "A", 0 0, v00964C38_0; 1 drivers
+v00965318_0 .net "B", 0 0, v00964DF0_0; 1 drivers
+v00964D40_0 .net "borrow1", 0 0, L_00943438; 1 drivers
+v00964D98_0 .net "borrow2", 0 0, L_00942AD8; 1 drivers
+v00965108_0 .net "borrow_in", 0 0, v00964EF8_0; 1 drivers
+v00965058_0 .alias "borrow_out", 0 0, v00965160_0;
+v00965370_0 .alias "diff", 0 0, v00964F50_0;
+v00964FA8_0 .net "diff1", 0 0, L_009433C8; 1 drivers
+S_00A290D0 .scope module, "hs1" "half_subtractor" 3 6, 4 1, S_00A28DA0;
+ .timescale 0 0;
+L_009433C8 .functor XOR 1, v00964C38_0, v00964DF0_0, C4<0>, C4<0>;
+L_00943400 .functor NOT 1, v00964C38_0, C4<0>, C4<0>, C4<0>;
+L_00943438 .functor AND 1, L_00943400, v00964DF0_0, C4<1>, C4<1>;
+v00A23760_0 .alias "A", 0 0, v009652C0_0;
+v00964C90_0 .alias "B", 0 0, v00965318_0;
+v00964E48_0 .alias "borrow_out", 0 0, v00964D40_0;
+v00964CE8_0 .alias "diff", 0 0, v00964FA8_0;
+v00964EA0_0 .net "not_A", 0 0, L_00943400; 1 drivers
+S_00A29620 .scope module, "hs2" "half_subtractor" 3 7, 4 1, S_00A28DA0;
+ .timescale 0 0;
+L_00943320 .functor XOR 1, L_009433C8, v00964EF8_0, C4<0>, C4<0>;
+L_00A237B8 .functor NOT 1, L_009433C8, C4<0>, C4<0>, C4<0>;
+L_00942AD8 .functor AND 1, L_00A237B8, v00964EF8_0, C4<1>, C4<1>;
+v00A2B638_0 .alias "A", 0 0, v00964FA8_0;
+v00A2AD68_0 .alias "B", 0 0, v00965108_0;
+v00A2B690_0 .alias "borrow_out", 0 0, v00964D98_0;
+v00A236B0_0 .alias "diff", 0 0, v00964F50_0;
+v00A23708_0 .net "not_A", 0 0, L_00A237B8; 1 drivers
+    .scope S_00A28FC0;
+T_0 ;
+    %movi 8, 842086453, 32;
+    %movi 40, 1734877234, 32;
+    %movi 72, 542337390, 32;
+    %movi 104, 1919969652, 32;
+    %movi 136, 1634869313, 32;
+    %movi 168, 1265987191, 32;
+    %movi 200, 32, 8;
+    %set/v v009650B0_0, 8, 192;
+    %vpi_call 2 12 "$display", "Kunwar Arpit Singh";
+    %vpi_call 2 13 "$dumpfile", "assign1_problem3_full_subtractor.vcd";
+    %vpi_call 2 14 "$dumpvars", 2'sb01, S_00A28FC0;
+    %vpi_call 2 16 "$display", " A | B | borrow_in | diff | borrow_out";
+    %vpi_call 2 17 "$display", "---------------------------";
+    %set/v v00965000_0, 0, 32;
+T_0.0 ;
+    %load/v 8, v00965000_0, 32;
+   %cmpi/s 8, 8, 32;
+    %jmp/0xz T_0.1, 5;
+    %load/v 8, v00965000_0, 32;
+    %set/v v00964EF8_0, 8, 1;
+    %set/v v00964DF0_0, 9, 1;
+    %set/v v00964C38_0, 10, 1;
+    %delay 10, 0;
+    %vpi_call 2 22 "$display", " %b | %b |    %b     |  %b  |     %b", v00964C38_0, v00964DF0_0, v00964EF8_0, v00964F50_0, v00965160_0;
+    %ix/load 0, 1, 0;
+    %load/vp0/s 8, v00965000_0, 32;
+    %set/v v00965000_0, 8, 32;
+    %jmp T_0.0;
+T_0.1 ;
+    %vpi_call 2 24 "$finish";
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 5;
+    "N/A";
+    "<interactive>";
+    "assign1_problem3_full_subtractor_tb.v";
+    "assign1_problem3_full_subtractor.v";
+    "./assign1_problem3_half_subtractor.v";
