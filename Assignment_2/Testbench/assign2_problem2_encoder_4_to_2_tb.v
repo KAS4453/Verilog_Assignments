@@ -1,0 +1,61 @@
+module encoder_4_to_2_tb;
+    reg [3:0] A;
+    wire [1:0] out;
+    reg [8*24-1:0] name;
+
+    encoder_4_to_2 dut (.A(A), .out(out));
+
+    initial begin
+        name = " Kunwar Arpit Singh 22185";
+        $dumpfile("assign2_problem2_encoder_4_to_2.vcd");
+        $dumpvars(1, encoder_4_to_2_tb);
+        $display("Kunwar Arpit Singh");
+        $display("Output for only the valid cases for 4 to 2 encoder");
+        $display("A (Binary & Decimal) | Output(Binary) | Output(Decimal)");
+        $display("----------------------------------------------");
+        A = 4'b0001; #10;
+        $display("%b    |   %d  |   %b  |   %d", A, A, out, out);
+        A = 4'b0010; #10;
+        $display("%b    |   %d  |   %b  |   %d", A, A, out, out);
+        A = 4'b0100; #10;
+        $display("%b    |   %d  |   %b  |   %d", A, A, out, out);
+        A = 4'b1000; #10;
+        $display("%b    |   %d  |   %b  |   %d", A, A, out, out);
+        $display("\nOutput for all the cases for 4 to 2 encoder");
+        $display("A (Binary & Decimal) | Output(Binary) | Output(Decimal)");
+        $display("----------------------------------------------");
+        A = 4'b0000; #10;
+        $display("%b    |   %d  |   %b  |   %d", A, A, out, out);
+        A = 4'b0001; #10;
+        $display("%b    |   %d  |   %b  |   %d", A, A, out, out);
+        A = 4'b0010; #10;
+        $display("%b    |   %d  |   %b  |   %d", A, A, out, out);
+        A = 4'b0011; #10;
+        $display("%b    |   %d  |   %b  |   %d", A, A, out, out);
+        A = 4'b0100; #10;
+        $display("%b    |   %d  |   %b  |   %d", A, A, out, out);
+        A = 4'b0101; #10;
+        $display("%b    |   %d  |   %b  |   %d", A, A, out, out);
+        A = 4'b0110; #10;
+        $display("%b    |   %d  |   %b  |   %d", A, A, out, out);
+        A = 4'b0111; #10;
+        $display("%b    |   %d  |   %b  |   %d", A, A, out, out);
+        A = 4'b1000; #10;
+        $display("%b    |   %d  |   %b  |   %d", A, A, out, out);
+        A = 4'b1001; #10;
+        $display("%b    |   %d  |   %b  |   %d", A, A, out, out);
+        A = 4'b1010; #10;
+        $display("%b    |   %d  |   %b  |   %d", A, A, out, out);
+        A = 4'b1011; #10;
+        $display("%b    |   %d  |   %b  |   %d", A, A, out, out);
+        A = 4'b1100; #10;
+        $display("%b    |   %d  |   %b  |   %d", A, A, out, out);
+        A = 4'b1101; #10;
+        $display("%b    |   %d  |   %b  |   %d", A, A, out, out);
+        A = 4'b1110; #10;
+        $display("%b    |   %d  |   %b  |   %d", A, A, out, out);
+        A = 4'b1111; #10;
+        $display("%b    |   %d  |   %b  |   %d", A, A, out, out);
+        $finish;
+    end
+endmodule

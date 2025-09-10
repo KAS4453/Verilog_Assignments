@@ -1,0 +1,145 @@
+#! /c/iverilog/bin/vvp
+:ivl_version "0.9.7 " "(v0_9_7)";
+:vpi_time_precision + 0;
+:vpi_module "system";
+:vpi_module "v2005_math";
+:vpi_module "va_math";
+S_012F91A8 .scope module, "encoder_4_to_2_tb" "encoder_4_to_2_tb" 2 1;
+ .timescale 0 0;
+v00960B68_0 .var "A", 3 0;
+v00960FE0_0 .var "name", 191 0;
+v00961038_0 .net "out", 1 0, L_00994DC0; 1 drivers
+S_012F8D68 .scope module, "dut" "encoder_4_to_2" 2 6, 3 1, S_012F91A8;
+ .timescale 0 0;
+v00952678_0 .net "A", 3 0, v00960B68_0; 1 drivers
+v00962C28_0 .net *"_s0", 3 0, C4<1000>; 1 drivers
+v00962C80_0 .net *"_s10", 1 0, C4<10>; 1 drivers
+v00962CD8_0 .net *"_s12", 3 0, C4<0010>; 1 drivers
+v00961140_0 .net *"_s14", 0 0, L_00960D20; 1 drivers
+v00960AB8_0 .net *"_s16", 1 0, C4<01>; 1 drivers
+v009610E8_0 .net *"_s18", 3 0, C4<0001>; 1 drivers
+v00960CC8_0 .net *"_s2", 0 0, L_00960BC0; 1 drivers
+v00961198_0 .net *"_s20", 0 0, L_00960D78; 1 drivers
+v00960F88_0 .net *"_s22", 1 0, C4<00>; 1 drivers
+v00960DD0_0 .net *"_s24", 1 0, C4<xx>; 1 drivers
+v00960E28_0 .net *"_s26", 1 0, L_00960F30; 1 drivers
+v00960A60_0 .net *"_s28", 1 0, L_00995290; 1 drivers
+v00960ED8_0 .net *"_s30", 1 0, L_00995188; 1 drivers
+v00960C18_0 .net *"_s4", 1 0, C4<11>; 1 drivers
+v00961090_0 .net *"_s6", 3 0, C4<0100>; 1 drivers
+v00960E80_0 .net *"_s8", 0 0, L_00960C70; 1 drivers
+v00960B10_0 .alias "out", 1 0, v00961038_0;
+L_00960BC0 .cmp/eq 4, v00960B68_0, C4<1000>;
+L_00960C70 .cmp/eq 4, v00960B68_0, C4<0100>;
+L_00960D20 .cmp/eq 4, v00960B68_0, C4<0010>;
+L_00960D78 .cmp/eq 4, v00960B68_0, C4<0001>;
+L_00960F30 .functor MUXZ 2, C4<xx>, C4<00>, L_00960D78, C4<>;
+L_00995290 .functor MUXZ 2, L_00960F30, C4<01>, L_00960D20, C4<>;
+L_00995188 .functor MUXZ 2, L_00995290, C4<10>, L_00960C70, C4<>;
+L_00994DC0 .functor MUXZ 2, L_00995188, C4<11>, L_00960BC0, C4<>;
+    .scope S_012F91A8;
+T_0 ;
+    %movi 8, 842086453, 32;
+    %movi 40, 1734877234, 32;
+    %movi 72, 542337390, 32;
+    %movi 104, 1919969652, 32;
+    %movi 136, 1634869313, 32;
+    %movi 168, 1265987191, 32;
+    %movi 200, 32, 8;
+    %set/v v00960FE0_0, 8, 192;
+    %vpi_call 2 10 "$dumpfile", "assign2_problem2_encoder_4_to_2.vcd";
+    %vpi_call 2 11 "$dumpvars", 2'sb01, S_012F91A8;
+    %vpi_call 2 12 "$display", "Kunwar Arpit Singh";
+    %vpi_call 2 13 "$display", "Output for only the valid cases for 4 to 2 encoder";
+    %vpi_call 2 14 "$display", "A (Binary & Decimal) | Output(Binary) | Output(Decimal)";
+    %vpi_call 2 15 "$display", "----------------------------------------------";
+    %movi 8, 1, 4;
+    %set/v v00960B68_0, 8, 4;
+    %delay 10, 0;
+    %vpi_call 2 17 "$display", "%b    |   %d  |   %b  |   %d", v00960B68_0, v00960B68_0, v00961038_0, v00961038_0;
+    %movi 8, 2, 4;
+    %set/v v00960B68_0, 8, 4;
+    %delay 10, 0;
+    %vpi_call 2 19 "$display", "%b    |   %d  |   %b  |   %d", v00960B68_0, v00960B68_0, v00961038_0, v00961038_0;
+    %movi 8, 4, 4;
+    %set/v v00960B68_0, 8, 4;
+    %delay 10, 0;
+    %vpi_call 2 21 "$display", "%b    |   %d  |   %b  |   %d", v00960B68_0, v00960B68_0, v00961038_0, v00961038_0;
+    %movi 8, 8, 4;
+    %set/v v00960B68_0, 8, 4;
+    %delay 10, 0;
+    %vpi_call 2 23 "$display", "%b    |   %d  |   %b  |   %d", v00960B68_0, v00960B68_0, v00961038_0, v00961038_0;
+    %vpi_call 2 24 "$display", "\012Output for all the cases for 4 to 2 encoder";
+    %vpi_call 2 25 "$display", "A (Binary & Decimal) | Output(Binary) | Output(Decimal)";
+    %vpi_call 2 26 "$display", "----------------------------------------------";
+    %set/v v00960B68_0, 0, 4;
+    %delay 10, 0;
+    %vpi_call 2 28 "$display", "%b    |   %d  |   %b  |   %d", v00960B68_0, v00960B68_0, v00961038_0, v00961038_0;
+    %movi 8, 1, 4;
+    %set/v v00960B68_0, 8, 4;
+    %delay 10, 0;
+    %vpi_call 2 30 "$display", "%b    |   %d  |   %b  |   %d", v00960B68_0, v00960B68_0, v00961038_0, v00961038_0;
+    %movi 8, 2, 4;
+    %set/v v00960B68_0, 8, 4;
+    %delay 10, 0;
+    %vpi_call 2 32 "$display", "%b    |   %d  |   %b  |   %d", v00960B68_0, v00960B68_0, v00961038_0, v00961038_0;
+    %movi 8, 3, 4;
+    %set/v v00960B68_0, 8, 4;
+    %delay 10, 0;
+    %vpi_call 2 34 "$display", "%b    |   %d  |   %b  |   %d", v00960B68_0, v00960B68_0, v00961038_0, v00961038_0;
+    %movi 8, 4, 4;
+    %set/v v00960B68_0, 8, 4;
+    %delay 10, 0;
+    %vpi_call 2 36 "$display", "%b    |   %d  |   %b  |   %d", v00960B68_0, v00960B68_0, v00961038_0, v00961038_0;
+    %movi 8, 5, 4;
+    %set/v v00960B68_0, 8, 4;
+    %delay 10, 0;
+    %vpi_call 2 38 "$display", "%b    |   %d  |   %b  |   %d", v00960B68_0, v00960B68_0, v00961038_0, v00961038_0;
+    %movi 8, 6, 4;
+    %set/v v00960B68_0, 8, 4;
+    %delay 10, 0;
+    %vpi_call 2 40 "$display", "%b    |   %d  |   %b  |   %d", v00960B68_0, v00960B68_0, v00961038_0, v00961038_0;
+    %movi 8, 7, 4;
+    %set/v v00960B68_0, 8, 4;
+    %delay 10, 0;
+    %vpi_call 2 42 "$display", "%b    |   %d  |   %b  |   %d", v00960B68_0, v00960B68_0, v00961038_0, v00961038_0;
+    %movi 8, 8, 4;
+    %set/v v00960B68_0, 8, 4;
+    %delay 10, 0;
+    %vpi_call 2 44 "$display", "%b    |   %d  |   %b  |   %d", v00960B68_0, v00960B68_0, v00961038_0, v00961038_0;
+    %movi 8, 9, 4;
+    %set/v v00960B68_0, 8, 4;
+    %delay 10, 0;
+    %vpi_call 2 46 "$display", "%b    |   %d  |   %b  |   %d", v00960B68_0, v00960B68_0, v00961038_0, v00961038_0;
+    %movi 8, 10, 4;
+    %set/v v00960B68_0, 8, 4;
+    %delay 10, 0;
+    %vpi_call 2 48 "$display", "%b    |   %d  |   %b  |   %d", v00960B68_0, v00960B68_0, v00961038_0, v00961038_0;
+    %movi 8, 11, 4;
+    %set/v v00960B68_0, 8, 4;
+    %delay 10, 0;
+    %vpi_call 2 50 "$display", "%b    |   %d  |   %b  |   %d", v00960B68_0, v00960B68_0, v00961038_0, v00961038_0;
+    %movi 8, 12, 4;
+    %set/v v00960B68_0, 8, 4;
+    %delay 10, 0;
+    %vpi_call 2 52 "$display", "%b    |   %d  |   %b  |   %d", v00960B68_0, v00960B68_0, v00961038_0, v00961038_0;
+    %movi 8, 13, 4;
+    %set/v v00960B68_0, 8, 4;
+    %delay 10, 0;
+    %vpi_call 2 54 "$display", "%b    |   %d  |   %b  |   %d", v00960B68_0, v00960B68_0, v00961038_0, v00961038_0;
+    %movi 8, 14, 4;
+    %set/v v00960B68_0, 8, 4;
+    %delay 10, 0;
+    %vpi_call 2 56 "$display", "%b    |   %d  |   %b  |   %d", v00960B68_0, v00960B68_0, v00961038_0, v00961038_0;
+    %set/v v00960B68_0, 1, 4;
+    %delay 10, 0;
+    %vpi_call 2 58 "$display", "%b    |   %d  |   %b  |   %d", v00960B68_0, v00960B68_0, v00961038_0, v00961038_0;
+    %vpi_call 2 59 "$finish";
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "assign2_problem2_encoder_4_to_2_tb.v";
+    "assign2_problem2_encoder_4_to_2.v";

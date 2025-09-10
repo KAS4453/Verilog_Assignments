@@ -1,0 +1,47 @@
+$date
+	Wed Sep 10 20:13:22 2025
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module wallace_tree_multiplier_4_bit_tb $end
+$var wire 8 ! out [7:0] $end
+$var reg 4 " A [3:0] $end
+$var reg 4 # B [3:0] $end
+$var reg 192 $ name [191:0] $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b10010110111010101101110011101110110000101110010001000000100000101110010011100000110100101110100001000000101001101101001011011100110011101101000001000000011001000110010001100010011100000110101 $
+b1 #
+b1 "
+b1 !
+$end
+#10
+b110010 !
+b1010 #
+b101 "
+#20
+b11100001 !
+b1111 #
+b1111 "
+#30
+b111111 !
+b111 #
+b1001 "
+#40
+b100100 !
+b11 #
+b1100 "
+#50
+b111100 !
+b1111 #
+b100 "
+#60
+b0 !
+b0 "
+#70

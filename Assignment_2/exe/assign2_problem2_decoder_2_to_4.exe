@@ -1,0 +1,78 @@
+#! /c/iverilog/bin/vvp
+:ivl_version "0.9.7 " "(v0_9_7)";
+:vpi_time_precision + 0;
+:vpi_module "system";
+:vpi_module "v2005_math";
+:vpi_module "va_math";
+S_00918BA0 .scope module, "decoder_2_to_4_tb" "decoder_2_to_4_tb" 2 1;
+ .timescale 0 0;
+v010E1730_0 .var "A", 1 0;
+v010E15D0_0 .var "name", 191 0;
+v010E1418_0 .net "out", 3 0, L_01105790; 1 drivers
+S_00918078 .scope module, "dut" "decoder_2_to_4" 2 6, 3 1, S_00918BA0;
+ .timescale 0 0;
+v010E2C28_0 .net "A", 1 0, v010E1730_0; 1 drivers
+v0091EF10_0 .net *"_s0", 1 0, C4<00>; 1 drivers
+v0091EF68_0 .net *"_s10", 3 0, C4<0010>; 1 drivers
+v010E1158_0 .net *"_s12", 1 0, C4<10>; 1 drivers
+v010E1520_0 .net *"_s14", 0 0, L_010E1050; 1 drivers
+v010E14C8_0 .net *"_s16", 3 0, C4<0100>; 1 drivers
+v010E1628_0 .net *"_s18", 1 0, C4<11>; 1 drivers
+v010E1368_0 .net *"_s2", 0 0, L_010E1470; 1 drivers
+v010E1100_0 .net *"_s20", 0 0, L_010E10A8; 1 drivers
+v010E11B0_0 .net *"_s22", 3 0, C4<1000>; 1 drivers
+v010E13C0_0 .net *"_s24", 3 0, C4<xxxx>; 1 drivers
+v010E12B8_0 .net *"_s26", 3 0, L_01105AA8; 1 drivers
+v010E1310_0 .net *"_s28", 3 0, L_01105BB0; 1 drivers
+v010E1208_0 .net *"_s30", 3 0, L_01105738; 1 drivers
+v010E1788_0 .net *"_s4", 3 0, C4<0001>; 1 drivers
+v010E1578_0 .net *"_s6", 1 0, C4<01>; 1 drivers
+v010E16D8_0 .net *"_s8", 0 0, L_010E1680; 1 drivers
+v010E1260_0 .alias "out", 3 0, v010E1418_0;
+L_010E1470 .cmp/eq 2, v010E1730_0, C4<00>;
+L_010E1680 .cmp/eq 2, v010E1730_0, C4<01>;
+L_010E1050 .cmp/eq 2, v010E1730_0, C4<10>;
+L_010E10A8 .cmp/eq 2, v010E1730_0, C4<11>;
+L_01105AA8 .functor MUXZ 4, C4<xxxx>, C4<1000>, L_010E10A8, C4<>;
+L_01105BB0 .functor MUXZ 4, L_01105AA8, C4<0100>, L_010E1050, C4<>;
+L_01105738 .functor MUXZ 4, L_01105BB0, C4<0010>, L_010E1680, C4<>;
+L_01105790 .functor MUXZ 4, L_01105738, C4<0001>, L_010E1470, C4<>;
+    .scope S_00918BA0;
+T_0 ;
+    %movi 8, 842086453, 32;
+    %movi 40, 1734877234, 32;
+    %movi 72, 542337390, 32;
+    %movi 104, 1919969652, 32;
+    %movi 136, 1634869313, 32;
+    %movi 168, 1265987191, 32;
+    %movi 200, 32, 8;
+    %set/v v010E15D0_0, 8, 192;
+    %vpi_call 2 10 "$display", "Kunwar Arpit Singh";
+    %vpi_call 2 11 "$dumpfile", "assign2_problem2_decoder_2_to_4.vcd";
+    %vpi_call 2 12 "$dumpvars", 2'sb01, S_00918BA0;
+    %vpi_call 2 13 "$display", "Kunwar Arpit Singh";
+    %vpi_call 2 14 "$display", "A (Binary & Decimal) | Output(Binary) | Output(Decimal)";
+    %vpi_call 2 15 "$display", "----------------------------------------------";
+    %set/v v010E1730_0, 0, 2;
+    %delay 10, 0;
+    %vpi_call 2 17 "$display", "%b    |   %d  |   %b  |   %d", v010E1730_0, v010E1730_0, v010E1418_0, v010E1418_0;
+    %movi 8, 1, 2;
+    %set/v v010E1730_0, 8, 2;
+    %delay 10, 0;
+    %vpi_call 2 19 "$display", "%b    |   %d  |   %b  |   %d", v010E1730_0, v010E1730_0, v010E1418_0, v010E1418_0;
+    %movi 8, 2, 2;
+    %set/v v010E1730_0, 8, 2;
+    %delay 10, 0;
+    %vpi_call 2 21 "$display", "%b    |   %d  |   %b  |   %d", v010E1730_0, v010E1730_0, v010E1418_0, v010E1418_0;
+    %set/v v010E1730_0, 1, 2;
+    %delay 10, 0;
+    %vpi_call 2 23 "$display", "%b    |   %d  |   %b  |   %d", v010E1730_0, v010E1730_0, v010E1418_0, v010E1418_0;
+    %vpi_call 2 24 "$finish";
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "assign2_problem2_decoder_2_to_4_tb.v";
+    "assign2_problem2_decoder_2_to_4.v";
