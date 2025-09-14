@@ -1,0 +1,19 @@
+VCD info: dumpfile assign3_problem5_bidirectional_shift_register.vcd opened for output.
+Kunwar Arpit Singh
+| WE | WAddr | WData | RAddr | RData
+| 0 |   0 | 0000 |   0 | xxxx
+| 1 |  10 | abcd |   0 | xxxx
+| 0 |  10 | abcd |   0 | xxxx
+| 1 |  42 | dead |   0 | xxxx
+| 0 |  42 | dead |   0 | xxxx
+| 0 |  42 | dead |  10 | xxxx
+| 0 |  42 | dead |  10 | abcd
+| 0 |  42 | dead |  42 | abcd
+| 0 |  42 | dead |  42 | dead
+| 0 |  42 | dead |   5 | dead
+| 0 |  42 | dead |   5 | xxxx
+| 1 | 127 | f00d |  10 | xxxx
+| 1 | 127 | f00d |  10 | abcd
+| 0 | 127 | f00d |  10 | abcd
+| 0 | 127 | f00d | 127 | abcd
+| 0 | 127 | f00d | 127 | f00d
