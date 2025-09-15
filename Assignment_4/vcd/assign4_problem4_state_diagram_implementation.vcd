@@ -1,0 +1,127 @@
+$date
+	Mon Sep 15 22:35:41 2025
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module state_diagram_implementation_tb $end
+$var wire 1 ! O $end
+$var integer 32 " N_PA [31:0] $end
+$var integer 32 # N_PB [31:0] $end
+$var reg 1 $ P_A $end
+$var reg 1 % P_B $end
+$var reg 1 & clk $end
+$var integer 32 ' cycle_count [31:0] $end
+$var integer 32 ( expected_value [31:0] $end
+$var reg 192 ) name [191:0] $end
+$var reg 1 * reset $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+1*
+b10010110111010101101110011101110110000101110010001000000100000101110010011100000110100101110100001000000101001101101001011011100110011101101000001000000011001000110010001100010011100000110101 )
+bx (
+b0 '
+0&
+0%
+0$
+b0 #
+b0 "
+0!
+$end
+#5
+1&
+#10
+0&
+0*
+#15
+b1 '
+1&
+#17
+1%
+1$
+b0 (
+#20
+0&
+#25
+b10 '
+b1 #
+b1 "
+1&
+#27
+0%
+b11 (
+#30
+0&
+#35
+1!
+b11 '
+b10 "
+1&
+#37
+1%
+0$
+b1 (
+#40
+0&
+#45
+0!
+b100 '
+b10 #
+1&
+#47
+1$
+b10 (
+#50
+0&
+#55
+1!
+b101 '
+b11 #
+b11 "
+1&
+#57
+0%
+0$
+b1 (
+#60
+0&
+#65
+b110 '
+1&
+#67
+1$
+#70
+0&
+#75
+0!
+b111 '
+b100 "
+1&
+#77
+1%
+0$
+b11 (
+#80
+0&
+#85
+b1000 '
+b100 #
+1&
+#87
+b0 (
+#90
+0&
+#95
+1!
+1&
+#100
+0&
+#105
+0!
+1&
+#107
